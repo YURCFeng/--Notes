@@ -123,7 +123,7 @@ www.example.com -> 192.0.2.44
   - 224.0.0.2 all-routers
   - ff01::1, ff02::1 all-nodes
   - ff01::2, ff02::2, ff05::2 all-routers
-
+##L08
 ###HTTP结构过程协议响应
 ###HTTP的方法任意五个及其功能
 - ![](7.png)
