@@ -1,5 +1,8 @@
-##L00
-###各层的协议
+# simple
+
+## L00
+
+### 各层的协议
 物联网淑慧适用
 
 - Application Layer应用层
@@ -10,10 +13,10 @@
 - Data Link Layer数据链路层
 - Physic Layer物理层
 ![](9.png)
-###网络和传输层和链路层功能
+### 网络和传输层和链路层功能
 
-##L02
-###ipv4ipv6区别子网掩码的划分
+## L02
+### ipv4ipv6区别子网掩码的划分
 - IPv4 32-bit  4*8bit，每位小于等于255（2^9-1）
 - IPv6 128-bit 8*16bit  每位小于等于(2^17-1)
 - Unreliable and connectionless datagram delivery service
@@ -21,7 +24,7 @@
 - IP datagram header
 - 数据报报头
 
-###subnetmask的计算
+### subnetmask的计算
 Address + subnet mask => net ID & host id
 
 - A & MASK => NetID
@@ -29,28 +32,29 @@ Address + subnet mask => net ID & host id
 - 根据位数判断
 ![](10.png)
 
-###ARP的功能
+### ARP的功能
 
 - Translate between Network and L2 address
 - IP --> MAC
 - 查询自己的ARP 缓存，如果在缓存中找到 MAC 地址，设备可以直接将数据发送到该 MAC 地址。
 - 否则广播寻找对应mac地址，找到了返回给自己，发送消息并缓存在arp表格
-##L03
+## L03
 ### ICMP (Internet Control Message Protocol) - Error Handling用于报错
 
-###UDPsocket和TCPsocket的图 10分
+### UDPsocket和TCPsocket的图 10分
 
 ![Screen Shot 2021-06-14 at 10.37.21 PM](https://gitee.com/Sa1vation/my-pic-bed/raw/master/typora_imgs/20210628150835.png)
 ![](1684661091147.jpg)
 
-###UDP读写函数的区别
-###TCP UDP的特点区别至少三点
+### UDP读写函数的区别
+### TCP UDP的特点区别至少三点
 ![](1684659529196.jpg)
-###三次握手 四次挥手的图
-###函数的作用
-###close和shutdown的区别
-![](11.png)
-###POSIX信号处理(三种处理方式)
+### 三次握手 四次挥手的图
+### 函数的作用
+### close和shutdown的区别
+- close() terminates data transfer in both directions
+- shutdown() selectively terminates data transfer in one direction or both directions
+### POSIX信号处理(三种处理方式)
 Every signal has a disposition, or action associated with 
 the signal. Set by SigAction. 
 
@@ -65,10 +69,10 @@ SIGKILL/SIGSTOP can‘t be ignored
 
 - Default, normally reception of any signal is to 
 terminate process.
-###POSIX的异常
+### POSIX的异常
 ![](12.png)
-##L06
-##五种I/O模型和图像的掌握
+## L06
+## 五种I/O模型和图像的掌握
 ### IO Multiplexing
 
 ### IO Models
@@ -91,9 +95,9 @@ terminate process.
 
 
 
-###五种模型的对比图
+### 五种模型的对比图
 ![Screen Shot 2021-06-15 at 6.35.43 PM](https://gitee.com/Sa1vation/my-pic-bed/raw/master/typora_imgs/20210628150848.png)
-###DNS的作用和功能
+### DNS的作用和功能
 Translates / maps between strings and IP addresses
 
 1. Forward lookup:
@@ -101,18 +105,18 @@ www.example.com -> 192.0.2.44
 
 2. Reverse lookup:
 192.0.2.44 -> www.example.com
-###getaddrinfo函数的功能(三个转换)
+### getaddrinfo函数的功能(三个转换)
 - IPv4 & IPv6
 - Name-to-address
 - Service-to-port 
-###getnameinfo函数的功能
+### getnameinfo函数的功能
 - IPv4 & IPv6
 - Address-to-name
 - Port-to-Service 
-##L07
-###函数读写的区别图
+## L07
+### 函数读写的区别图
 - ![](13.png)
-###multicast address的ipv4和ipv6
+### multicast address的ipv4和ipv6
 
 - IPv4
   - Class D; 224.0.0.0 - 239.255.255.255
@@ -123,17 +127,17 @@ www.example.com -> 192.0.2.44
   - 224.0.0.2 all-routers
   - ff01::1, ff02::1 all-nodes
   - ff01::2, ff02::2, ff05::2 all-routers
-##L08
-###HTTP结构过程协议响应
-###HTTP的方法任意五个及其功能
+## L08
+### HTTP结构过程协议响应
+### HTTP的方法任意五个及其功能
 - ![](7.png)
-###网络安全
+### 网络安全
 
 - Passive Attacks
   - Learn or make use of information from target system but does not affect system resources.
 - Active Attacks
   - Attempts to alter system resources or affect their operations.
-##对称加密非对称加密密钥
+## 对称加密非对称加密密钥
 ### Symmetric Encryption对称
 
 - Security - Depends on the secrecy of the key
@@ -142,10 +146,10 @@ www.example.com -> 192.0.2.44
   - Blowfish
   - Twofish
   - Advanced Encryption Standard (AES)
-
-###对称加密的六个组成部分
+### Public Key/Asymmetric Encryption非对称
+### 非对称加密的六个组成部分
 - ![](8.png)
-###对称加密的应用
+### 对称加密的应用
 - Encryption/decryption: 
 The sender encrypts a message with the recipient’s public key
 - Digital signature: 
